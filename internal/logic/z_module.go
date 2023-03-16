@@ -9,6 +9,7 @@ import (
 // It provides the business logic for the application
 var Module = fx.Module("logic",
 	fx.Provide(
+		NewDaprClient,
 		NewRegister,
 		NewLogin,
 		NewFeed,

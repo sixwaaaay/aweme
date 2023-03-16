@@ -7,9 +7,11 @@ require (
 	github.com/alicebob/miniredis/v2 v2.30.0
 	github.com/aws/aws-sdk-go v1.44.207
 	github.com/brpaz/echozap v1.1.3
+	github.com/dapr/go-sdk v1.7.0
 	github.com/go-playground/validator/v10 v10.11.2
 	github.com/go-sql-driver/mysql v1.7.0
 	github.com/golang-jwt/jwt/v4 v4.5.0
+	github.com/json-iterator/go v1.1.12
 	github.com/labstack/echo-jwt/v4 v4.1.0
 	github.com/labstack/echo/v4 v4.10.2
 	github.com/redis/go-redis/extra/redisotel/v9 v9.0.2
@@ -23,7 +25,6 @@ require (
 	github.com/uptrace/uptrace-go v1.13.0
 	go.opentelemetry.io/contrib/instrumentation/github.com/labstack/echo/otelecho v0.40.0
 	go.opentelemetry.io/otel v1.14.0
-	go.opentelemetry.io/otel/exporters/jaeger v1.14.0
 	go.opentelemetry.io/otel/sdk v1.14.0
 	go.uber.org/fx v1.19.2
 	go.uber.org/zap v1.24.0
@@ -64,6 +65,8 @@ require (
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.17 // indirect
+	github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 // indirect
+	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/redis/go-redis/extra/rediscmd/v9 v9.0.2 // indirect
 	github.com/stretchr/objx v0.5.0 // indirect

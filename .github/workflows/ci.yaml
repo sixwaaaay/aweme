@@ -55,16 +55,24 @@ jobs:
           sh ./scripts/codegen.sh
 
       - name: Login to DockerHub
-        if: github.ref == 'refs/heads/uptrace-apm' && github.event_name == 'push'
+        if: github.ref == 'refs/heads/pubsub' && github.event_name == 'push'
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push
+      - name: Build and push aweme
         uses: docker/build-push-action@v4
         with:
           context: .
           file: ./scripts/Dockerfile
-          push: ${{ github.ref == 'refs/heads/uptrace-apm' && github.event_name == 'push' }}
-          tags: ${{ secrets.DOCKERHUB_USERNAME || 'aweme' }}/aweme:apm
+          push: ${{ github.ref == 'refs/heads/pubsub' && github.event_name == 'push' }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME || 'aweme' }}/aweme:pubsub
+
+      - name: Build and push sub
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: ./scripts/Dockerfile-sub
+          push: ${{ github.ref == 'refs/heads/pubsub' && github.event_name == 'push' }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME || 'aweme' }}/sub:pubsub

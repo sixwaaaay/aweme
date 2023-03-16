@@ -34,7 +34,7 @@ func NewUpload(upload *logic.Upload) *Api {
 			if err != nil {
 				return err
 			}
-			resp, err := upload.UploadVideo(c.Request().Context(),
+			resp, err := upload.UploadVideoEvent(c.Request().Context(),
 				&types.UploadReq{Title: title, Data: f, FileName: file.Filename}) // handle upload
 			if err != nil {
 				return err

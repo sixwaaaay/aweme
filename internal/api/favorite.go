@@ -16,7 +16,7 @@ func NewFavoriteAction(like *logic.Like) *Api {
 	return &Api{
 		Method:  "POST",
 		Path:    "/favorite/action/",
-		Handler: WrapperFunc(like.Like),
+		Handler: WrapperFunc(like.LikeEvent),
 	}
 }
 
